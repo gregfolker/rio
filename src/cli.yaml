@@ -12,3 +12,8 @@ args:
       possible_values:
          - low
          - high
+   - outfile:
+      help: Specifies an output file to write the results to instead of STDOUT
+      short: o
+      long: outfile
+      takes_value: true

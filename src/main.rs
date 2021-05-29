@@ -10,4 +10,8 @@ fn main() {
     let verbosity = matches.value_of("verbosity");
 
     println!("Running app with verbosity={:?}", verbosity);
+
+    let outfile = matches.value_of("outfile");
+
+    println!("Running app with outfile={:?}", outfile);
 }
