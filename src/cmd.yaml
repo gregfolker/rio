@@ -1,0 +1,8 @@
+name: rio
+version: "1.0.0"
+author: Greg Folker <gregfolker.dev@gmail.com>
+about: I/O tool written in Rust
+
+args:
+
+subcommands:
