@@ -2,7 +2,13 @@ name: rio
 version: "1.0.0"
 author: Greg Folker <gregfolker.dev@gmail.com>
 about: I/O tool written in Rust
-
+usage: "rio [FLAGS]"
 args:
-
-subcommands:
+   - verbosity:
+      help: Sets the level of verbosity
+      short: v
+      long: verbosity
+      takes_value: true
+      possible_values:
+         - low
+         - high
