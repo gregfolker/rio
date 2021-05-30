@@ -10,6 +10,7 @@ args:
       long: verbosity
       takes_value: true
       possible_values:
+         - off
          - low
          - high
    - outfile:
