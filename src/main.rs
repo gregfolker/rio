@@ -14,4 +14,8 @@ fn main() {
     let outfile = matches.value_of("outfile");
 
     println!("Running app with outfile={:?}", outfile);
+
+    let runtime = matches.value_of("runtime").unwrap_or("0");
+
+    println!("Running app with runtime={}", runtime);
 }

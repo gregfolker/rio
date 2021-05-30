@@ -16,4 +16,9 @@ args:
       help: Specifies an output file to write the results to instead of STDOUT
       short: o
       long: outfile
+   - runtime:
+      help: Limits the runtime of the tool to <seconds>
+      short: t
+      long: runtime
       takes_value: true
+      value_name: seconds     takes_value: true
