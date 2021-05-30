@@ -2,7 +2,6 @@
 
 ## TODO:
 	* Add flag arguments
-      - `--target` for target file descriptor (Required)
       - `--block-size` for size of I/O (Default=4KiB)
       - `--io-engine` for the I/O engine to use
       - `--queue-depth` for the max amount of outstanding I/O to wait for (Default=1)
