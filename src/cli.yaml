@@ -24,3 +24,9 @@ args:
       takes_value: true
       value_name: seconds
       takes_value: true
+   - numthreads:
+      help: Specifies the number of threads to create for this job
+      short: n
+      long: num-threads
+      value_name: num-threads
+      takes_value: true

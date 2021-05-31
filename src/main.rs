@@ -5,6 +5,8 @@ use::clap::{App, load_yaml};
 use::std::thread;
 use::std::time::Duration;
 
+use::rio::ThreadPool;
+
 fn main() {
     let yaml = load_yaml!("cli.yaml");
     let matches = App::from(yaml).get_matches();
@@ -12,6 +14,7 @@ fn main() {
     let verbosity = matches.value_of("verbosity").unwrap_or("off");
     let outfile = matches.value_of("outfile").unwrap_or("STDOUT");
     let runtime: u64 = matches.value_of("runtime").unwrap_or("0").parse().expect("Expected a numerical value");
+    let thread_count: usize = matches.value_of("thread-count").unwrap_or("1").parse().expect("Expected a numerical value");
 
     if verbosity != "off" {
         println!("Running app with verbosity={}", verbosity);
@@ -19,13 +22,9 @@ fn main() {
         println!("Running app with runtime={}", runtime);
      }
 
-    let worker = thread::Builder::new().name("worker".to_string()).spawn(move || {
-        println!("Hello from the worker thread!");
-    }).unwrap();
+    let threads = ThreadPool::new(thread_count);
 
-    let _ = worker.join();
-
-    println!("Waiting for thread(s) to complete...");
+    println!("Waiting for {} thread(s) to complete...", thread_count);
     thread::sleep(Duration::from_millis(runtime * 1000));
     println!("Done!");
 }
