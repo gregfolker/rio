@@ -11,4 +11,4 @@
   - `--max-bandwidth` for limiting the total amount of bandwidth the tool is allowed to consume
   - `--sync` for using synchronous I/O instead of asynchronous (Only valid with `--buffered` I/O)
   - `--iterations` for specifying the amount of times to perform this job (Default=1)
-  - `--worker-threads` for specfiying the number of worker threads to perform this job (Default=1)
+  - `--num-threads` for specfiying the number of worker threads to perform this job (Default=1)
